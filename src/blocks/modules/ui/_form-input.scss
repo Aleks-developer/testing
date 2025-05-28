@@ -1,0 +1,66 @@
+.form-input {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  border: 1px solid $color8;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  padding: 12.5px 15px;
+  transition: $baseSpeedTransition;
+
+  &:not([class*="--textarea"]) {
+    height: 42px;
+  }
+
+  &[class*="--textarea"] {
+    height: 140px;
+    resize: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $colorBlue;
+    box-shadow: 0 0 4px 0 $colorBlue;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: $color4;
+  }
+
+  &__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color5;
+    margin-bottom: 6px;
+
+    sup {
+      top: 0;
+      font-size: 100%;
+      color: $color7;
+    }
+  }
+
+  &.just-validate-error-field {
+    border-color: $color7;
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  margin-top: 2px;
+}
